@@ -3,7 +3,7 @@ import urllib.request
 
 def fetch_excel_products():
     try:
-        url = "https://opensheet.elk.sh/1OV2ZSt4TFBLC7V2JrUxYD5PONTxXWQ5HcB2Bnrhh7-I/catalog"
+        url = "https://opensheet.elk.sh/15DUUkln-Qwt7VaggugdSlXg2I8repqg01mQQf9hXQu8/products"
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
         with urllib.request.urlopen(req) as response:
             data = json.loads(response.read().decode("utf-8"))

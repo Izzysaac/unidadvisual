@@ -5,15 +5,15 @@ import FilterSVG from "@assets/filter.svg"
 const categories = getCategoriesWithSlug();
 ---
 
-<aside class="filter-container flex justify-end items-center gap-2 reverse mb-2">
+<aside class="filter-container flex justify-between items-center gap-2 mb-2">
 	<label for="category-filter" class="flex items-center justify-center gap-2">
 		
-		<span class="rounded border border-black px-2 py-px opacity-80">
+		<span class="rounded border border-black px-2 py-px opacity-80 pointer-events-none">
 			<FilterSVG class="w-5 h-5 inline"/> Filtro
 		</span>
 
-		<select id="category-filter" name="category-filter" class="filter-select order-first">
-			<option value="">Todos los modelos</option>
+		<select id="category-filter" name="category-filter" class="filter-select">
+			<option value="">Todo</option>
 			{
 				categories.map((category) => (
 					<option value={category.slug}>{category.name}</option>
@@ -21,4 +21,8 @@ const categories = getCategoriesWithSlug();
 			}
 		</select>
 	</label>
+	<span>
+		<span id="filter-count"></span>
+		produtos
+	</span>
 </aside>

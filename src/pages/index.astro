@@ -1,75 +1,61 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import BestSellers from "@components/BestSellers.astro";
+// import BestSellers from "@components/BestSellers.astro";
+import MainCategorias from "@components/MainCategories.astro";
+
 import Reviews from "@components/Reviews.astro";
 import FAQS from "@components/productPage/FAQS.astro";
 
 const images = {
-	hero: "https://res.cloudinary.com/dr5knskbb/image/upload/v1783319098/bg-parillasydefensas_tnfgjg.webp",
+	hero: "https://res.cloudinary.com/dr5knskbb/image/upload/v1789857953/maria-david_nsasf5.webp",
 
 };
 // CollectionPage + ItemList + BreadcrumbList
 const seo = {
-	title: "Parrillas y Defensas para Moto",
+	title: "Optica Unidad Visual",
 	description:
-		"Encuentra la parrilla y defensa perfecta para tu moto. Fabrica y venta de lujos y accesorios para motos."
+		"Especialistas al cuidado de tus ojos"
 };
 ---
 
 <Layout title={seo.title} description={seo.description} hero={images.hero}>
 	<div
 		id="hero"
-		style={`background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(${images.hero});`}
-		class="background-image m-auto flex min-h-full max-w-120 flex-col items-center pb-4 text-white"
+		class="m-auto flex min-h-full max-w-120 flex-col items-center pt-19!"
 	>
-		<h1
-			class="mt-[30%] block w-full bg-black/50 text-center text-2xl font-bold"
-		>
-			<span>Las Mejores Parrillas y Defensas</span><br />
-			<span>Para Moto en Colombia</span>
-		</h1>
-		<p class="block w-full bg-black/50 text-center">
-			Más protección. Más capacidad. Más utilidad
-		</p>
+		<img src={images.hero} alt="Hero Image" class="object-contain w-full h-full" />
 
-		<div class="mt-auto mb-20 flex w-full flex-col gap-4 px-5 text-center">
+
+		<h1 class="block w-ful text-center text-lg font-bold text-black/90 mt-4">
+			<span>Especialistas al cuidado de tus ojos</span>
+		</h1>
+		<p class="block w-full text-center mb-4">Cotiza tus gafas sin compromiso.</p>
+
+		<div class="mt-auto mb-4 flex w-full flex-col gap-4 px-5 text-center">
 			<a
 				href="/productos"
 				class="block rounded bg-(--accent) px-5 py-2 text-lg font-semibold text-(--on-accent)"
 				>Ver catálogo</a
 			>
 			<p>
-				Llevo más de tres años con ella y sigue como el primer día -
+				Solicite una montura nueva con un examen vigente y me ha ido súper bien, recomiendo el lugar, 10/10-
 				⭐⭐⭐⭐⭐
 			</p>
 		</div>
 	</div>
 
 	<div
-		class="flex items-center justify-center gap-4 bg-black py-6 text-center text-sm text-white/80"
+		class="flex items-center justify-center gap-4 bg-(--accent) py-6 text-center text-sm text-white/95"
 	>
 		<p class="flex flex-1 flex-col items-center justify-center gap-2">
 			<span
-				><svg
-					viewBox="0 0 16 16"
-					fill="currentColor"
-					xmlns="http://www.w3.org/2000/svg"
-					width="40px"
-					height="40px"
-					><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
-						id="SVGRepo_tracerCarrier"
-						stroke-linecap="round"
-						stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
-						<path
-							d="M10 3.5L13.0581 0.441881C12.4304 0.15802 11.7337 0 11 0C8.23858 0 6 2.23858 6 5C6 5.45802 6.06158 5.90165 6.17692 6.32308L0 12.5L3.5 16L9.67692 9.82308C10.0983 9.93842 10.542 10 11 10C13.7614 10 16 7.76142 16 5C16 4.26633 15.842 3.56956 15.5581 2.94188L12.5 6H10V3.5Z"
-							fill="#currentColor"></path>
-					</g></svg
-				></span
+				><svg width="40px"
+					height="40px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8L3.07945 4.30466C4.29638 2.84434 6.09909 2 8 2C9.90091 2 11.7036 2.84434 12.9206 4.30466L16 8L12.9206 11.6953C11.7036 13.1557 9.90091 14 8 14C6.09909 14 4.29638 13.1557 3.07945 11.6953L0 8ZM8 11C9.65685 11 11 9.65685 11 8C11 6.34315 9.65685 5 8 5C6.34315 5 5 6.34315 5 8C5 9.65685 6.34315 11 8 11Z" fill="currentColor"></path> </g></svg></span
 			>
 			<span></span>
-			<span>
-				Somos <br /> fabricantes
-			</span>
+			<a href="https://maps.app.goo.gl/6sfsDkoeYupB9s4bA" target="_blank" rel="noopener noreferrer" class="underline">
+				Optica  <br> en Bogotá
+			</a>
 		</p>
 		<p class="flex flex-1 flex-col items-center justify-center gap-2">
 			<span
@@ -104,7 +90,7 @@ const seo = {
 			>
 			<span></span>
 			<span>
-				Materiales de <br /> primera calidad
+				+35 años <br /> de experiencia
 			</span>
 		</p>
 		<p class="flex flex-1 flex-col items-center justify-center gap-2">
@@ -136,17 +122,17 @@ const seo = {
 					></svg
 				></span
 			>
-			<span>Garantía <br /> de adaptación</span>
+			<span>Garantía<br /> de 90 días</span>
 		</p>
 	</div>
 
 	<div class="flex flex-col gap-3 px-2.5 py-4">
 		<h2 class="mb-1 text-xl">Los más vendidos</h2>
 
-		<BestSellers />
+		<MainCategorias />
 		<a
 			href="/productos"
-			class="m-auto rounded bg-red-600 px-3 py-2 text-white"
+			class="m-auto rounded bg-blue-900 px-3 py-2 text-white"
 			>Ver todos los productos</a
 		>
 	</div>
@@ -157,29 +143,24 @@ const seo = {
 	</div>
 
 	<div class="px-2.5 py-4 text-justify">
-		<h2 class="text-lg">Sobre el taller</h2>
+		<h2 class="text-lg">Sobre nosotros</h2>
+
+		<figure>
+			<img src="https://res.cloudinary.com/dr5knskbb/image/upload/v1789857952/david_bi6mbk.webp" alt="Dr David Colmenares" class="my-2 w-full rounded-lg object-cover" />
+			<figcaption>Dr. David Colmenares</figcaption>
+		</figure>
 
 		<p class="my-2">
-			Somos un taller <strong>fabricante de accesorios para motos</strong
-			>, ubicado en Pitalito, Huila, con más de <strong
-				>20 años de experiencia</strong
-			> trabajando el metal y desarrollando soluciones para motociclistas.
+			Optómetra experto en lentes de contacto con más de 35 años de experiencia.Graduado de la Universidad de La Salle, Bogotá, ha dedicado su vida a ayudar a las personas a **ver mejor**.
 		</p>
 
-		<p class="my-2">
-			Fabricamos cada producto pensando en el uso real: <strong>
-				buenos materiales, soldaduras resistentes y acabados de pintura
-				duraderos</strong
-			>, porque creemos que un accesorio para moto debe soportar el
-			trabajo y las condiciones del día a día, no simplemente verse bien.
-		</p>
+		<figure>
+			<img src="https://res.cloudinary.com/dr5knskbb/image/upload/v1789857952/dra-maria_zpjugh.webp" alt="Especialista, Maria Carreño">
+			<figcaption>Especialista, Maria Carreño</figcaption>
+		</figure>
 
 		<p class="my-2">
-			Desarrollamos parrillas, defensas y otros accesorios buscando un
-			equilibrio entre <strong
-				>calidad, durabilidad y funcionalidad</strong
-			>, para que los motociclistas puedan aprovechar más su moto y
-			confiar en que lo que llevan instalado está hecho para durar.
+			Profesional en cuidados de la visión con más de 15 años de experiencia en ópticas, brindando una atención personalizada con el fin de solucionar los problemas de cada paciente.
 		</p>
 	</div>
 
@@ -250,9 +231,9 @@ const seo = {
 
 <style>
 	@import "tailwindcss";
-	.background-image {
+	/* .background-image {
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-	}
+	} */
 </style>

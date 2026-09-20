@@ -19,12 +19,25 @@ export const createProductSlug = (name) => {
 export const renderProducts = () => {
 	if (productItems.length === 0) return;
 
+	let visibleCount = 0;
+
 	for (const { el, category } of productItems) {
 		// Si la categoría actual es 'all' (opcional), se muestran todos
 		const hide = currentCategory !== '' && category !== currentCategory;
 		// Si hide es true -> añade la clase. Si es false -> la quita.
 		el.classList.toggle("product-hidden", hide);
+
+		// Si no se oculta, sumamos 1 al contador de visibles
+        if (!hide) {
+            visibleCount++;
+        }
 	}
+
+	// Actualizamos el texto dentro del elemento .filter-count
+    const countElement = document.getElementById("filter-count");
+    if (countElement) {
+        countElement.textContent = visibleCount;
+    }
 };
 
 // Update URL without page reload
