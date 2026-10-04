@@ -3,14 +3,14 @@
 const { modelo } = Astro.params;
 
 const bulletPoints = [
-    `✅ Beneficio 1`,
-    "✅ Beneficio 2",
-    "✅ Beneficio 3"
+    `📦 Envío <strong>GRATIS</strong> a toda colombia`,
+    `🔄 Cambios y devoluciones <strong>FÁCILES</strong>`,
+    `📞 Atención <strong>RÁPIDA</strong> por whatsapp`
 ];
 
 ---
 
-<ul class="text-left">
+<ul class="text-center py-2">
     {bulletPoints.map((point) => (
         <li class="bullet-point" set:html={point} />
     ))}

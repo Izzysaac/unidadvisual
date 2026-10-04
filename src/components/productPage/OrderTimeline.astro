@@ -55,6 +55,11 @@ import OrderDelivery from "../../assets/orderDelivery.svg";
 		</p>
 	</div>
 </div>
+<p> Todos los pedidos se envían desde la óptica. Una vez confirmado el pedido, se estima de 2 a 3 días hábiles para la fabricación de los lentes y otros 2 a 3 días hábiles para recibir su pedido. <br>
+*Los días hábiles no incluyen fines de semana ni festivos.
+</p>
+
+
 <style>
 	.container-order-checkpoint {
 		width: 100%;
@@ -111,8 +116,19 @@ import OrderDelivery from "../../assets/orderDelivery.svg";
 	const obtenerFechas = (diasArray) => {
 		const hoy = new Date();
 
-		return diasArray.map((diasHabiles) => {
+		return diasArray.map((diasHabiles, i) => {
 			const fecha = new Date(hoy);
+
+			// Primer valor: días calendario, sin importar si es fin de semana
+			if (i === 0) {
+				fecha.setDate(fecha.getDate() + diasHabiles);
+
+				return fecha.toLocaleDateString("es-CO", {
+					day: "numeric",
+					month: "long",
+				});
+			}
+
 			let restantes = diasHabiles;
 
 			while (restantes > 0) {
@@ -137,13 +153,11 @@ import OrderDelivery from "../../assets/orderDelivery.svg";
 		});
 	};
 
-	const dias = [0, 1, 3];
+	const dias = [0, 3, 6];
 	const resultado = obtenerFechas(dias);
 
 	const orderDate = document.getElementById("order-date");
-	const personalizationDate = document.getElementById(
-		"personalization-date",
-	);
+	const personalizationDate = document.getElementById("personalization-date");
 	const deliveryDate = document.getElementById("delivery-date");
 
 	orderDate.textContent = resultado[0];

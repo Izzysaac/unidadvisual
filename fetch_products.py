@@ -45,6 +45,9 @@ def fetch_excel_products():
 
             opcion2 = item.get("OPCION2", "").strip()
             valor2 = item.get("VALOR2", "").strip()
+            
+            opcion3 = item.get("OPCION3", "").strip()
+            valor3 = item.get("VALOR3", "").strip()
 
             if opcion1 and valor1:
                 producto["opciones"].setdefault(opcion1, [])
@@ -57,6 +60,12 @@ def fetch_excel_products():
 
                 if valor2 not in producto["opciones"][opcion2]:
                     producto["opciones"][opcion2].append(valor2)
+            
+            if opcion3 and valor3:
+                producto["opciones"].setdefault(opcion3, [])
+
+                if valor3 not in producto["opciones"][opcion3]:
+                    producto["opciones"][opcion3].append(valor3)
 
             # -------- VARIANTE --------
 
@@ -70,6 +79,9 @@ def fetch_excel_products():
 
             if opcion2 and valor2:
                 variante[opcion2] = valor2
+                
+            if opcion3 and valor3:
+                variante[opcion3] = valor3
 
             producto["variantes"].append(variante)
 

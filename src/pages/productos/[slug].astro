@@ -5,18 +5,19 @@ import Layout from "../../layouts/Layout.astro";
 import Breadcrumb from "@components/Breadcrumb.astro";
 import ImageCarousel from "@components/ImageCarousel.astro";
 
-import BulletPointsAstroComponent from "@components/productPage/BulletPoints.astro";
-import MainReviewAstroComponent from "@components/productPage/MainReview.astro";
+import SummaryReviews from "@components/productPage/SummaryReviews.astro";
 import PaymentMethodsAstroComponent from "@components/productPage/PaymentMethods.astro";
-import FAQSAstroComponent from "@components/productPage/FAQS.astro";
+import MainReviewAstroComponent from "@components/productPage/MainReview.astro";
+import BulletPointsAstroComponent from "@components/productPage/BulletPoints.astro";
+import Features from "@components/productPage/Features.astro";
 import OrderTimeline from "@components/productPage/OrderTimeline.astro";
+import FAQSAstroComponent from "@components/productPage/FAQS.astro";
 import ReviewsAstroComponent from "@components/Reviews.astro";
 
 import { getCldImageUrl } from 'astro-cloudinary/helpers';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 // const products = rawProducts.filter( product => product.estado == "activo")
-
 
 const { item } = Astro.props;
 
@@ -93,17 +94,19 @@ export function getStaticPaths() {
 
 <Layout title={seo.title} description={seo.description} schema={seo.productSchema} image={seo.image}>
 	<!-- <Breadcrumb class="pt-23 px-2.5" items={[{name:"Productos", href:"/productos/"},{name: item.nombre}]} /> -->
-	<main class=" pt-23 flex flex-col text-center gap-2 max-w-125 m-auto!">
+	<main class="pt-20 flex flex-col  gap-2 max-w-125 m-auto!">
 		<ImageCarousel name={item.nombre} description={item.descripcion} media={item.media}/>
-		<div class="flex flex-col gap-4 px-2.5 max-w-100 m-auto">
+		<div class="flex flex-col gap-2 px-2.5 pt-10 max-w-100 m-auto">
 
 			<div style="display: none;" id="product-data">
 				{JSON.stringify(item)}
 			</div>
 
-			<h1 class="text-2xl font-bold mt-2">{item.nombre}</h1>
+			<h1 class="text-2xl font-bold mt-2 text-start">{item.nombre}</h1>
 
-			<BulletPointsAstroComponent />
+			
+
+			<SummaryReviews />
 
 			{
 				item.descripcion && (
@@ -117,37 +120,35 @@ export function getStaticPaths() {
 			</p>
 
 
-			<form id="form" class="text-left">
+			<form id="form" class="text-left gap-2 flex flex-col">
+				{
+					Object.entries(item.opciones || {}).map(([opcion, valores]) => (	
+						<fieldset class="flex flex-col gap-2">
+							<legend class="capitalize">
+								{opcion}
+							</legend>
 
-			{
-				Object.entries(item.opciones || {}).map(([opcion, valores]) => (	
-					<fieldset class="flex flex-col gap-2">
-						<legend class="font-semibold capitalize">
-							{opcion}
-						</legend>
-
-						<div class="flex gap-4">
-							{
-								(valores as string[]).map((valor, i) => (
-									<div>
-										<input
-											type="radio"
-											id={`${opcion}-${valor}`}
-											name={opcion}
-											value={valor}
-											checked={i === 0}
-										/>
-										<label for={`${opcion}-${valor}`}>
-											{valor}
-										</label>
-									</div>
-								))
-							}
-						</div>
-					</fieldset>
-				))
-			}
-
+							<div class="flex gap-4">
+								{
+									(valores as string[]).map((valor, i) => (
+										<div>
+											<input
+												type="radio"
+												id={`${opcion}-${valor}`}
+												name={opcion}
+												value={valor}
+												checked={i === 0}
+											/>
+											<label for={`${opcion}-${valor}`}>
+												{valor}
+											</label>
+										</div>
+									))
+								}
+							</div>
+						</fieldset>
+					))
+				}
 			</form>
 
 			<button
@@ -156,7 +157,7 @@ export function getStaticPaths() {
 				data-id={productId}
 				data-title={item.nombre}
 				data-image={item.media?.[0] ?? ""}
-				class="bg-(--accent) text-(--on-accent) active:bg-(--brand-hover) font-bold py-2 px-4 rounded text-lg"
+				class="bg-(--accent) text-(--on-accent) active:bg-(--brand-hover) font-bold py-2 px-4 rounded text-lg mt-2"
 			>
 				Añadir al carrito
 			</button>
@@ -165,7 +166,11 @@ export function getStaticPaths() {
 
 			<MainReviewAstroComponent />
 
+			<BulletPointsAstroComponent />
+
 			<OrderTimeline/>
+
+			<Features />
 
 			<ReviewsAstroComponent />
 
