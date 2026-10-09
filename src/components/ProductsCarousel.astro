@@ -1,0 +1,83 @@
+---
+import { getCldImageUrl } from 'astro-cloudinary/helpers';
+const products  = [
+    {
+        image: "https://res.cloudinary.com/dr5knskbb/image/upload/v1791528276/perseo-gris-verde-02_n749eo.webp",
+        name: "Perseo",
+    },
+    {
+        image: "https://res.cloudinary.com/dr5knskbb/image/upload/v1791529298/american_fbvgwq.webp",
+        name: "American",
+    },
+    {
+        image: "https://res.cloudinary.com/dr5knskbb/image/upload/v1791529297/dydm008_icwncz.webp",
+        name: "DYD M008",
+    },
+    {
+        image: "https://res.cloudinary.com/dr5knskbb/image/upload/v1791529297/dyd-caballero_yizgxk.webp",
+        name: "DYD Caballero",
+    },
+    {
+        image: "https://res.cloudinary.com/dr5knskbb/image/upload/v1791529298/atena_cbuxsk.webp",
+        name: "Atena",
+    }
+]
+---
+<div class="overflow-x overflow-scroll flex gap-2 p-4 text-center text-sm text-black/90 snap-x snap-mandatory">
+    {
+        products.map((product, i) => (
+            <article class="">
+                <figure class="w-30 aspect-video">
+                    <img src={product.image} alt="" class="w-full h-full object-cover" />
+                </figure>
+                <p class="text-lg font-bold">{product.name}</p>
+            </article>
+        ))
+    }
+</div>
+
+<!-- <div class="wrapper flex w-full snap-x snap-mandatory gap-2 overflow-x-scroll items-start">
+	{
+        reviews.map((review, i) => (
+            <article class="card snap-center w-11/12 max-w-125 shrink-0 box-border flex flex-col justify-center items-center text-center gap-2.5 aspect-square bg-slate-100 py-3">
+                <img src={review.image} alt="" />
+                <span>⭐⭐⭐⭐⭐</span>
+                <p class="text-lg font-bold">{review.name}</p>
+            </article>
+        ))
+    }
+</div> -->
+<!-- transition:name={`img-${mediaSrc}-${i}`} -->
+
+<style>
+	.wrapper {
+		scroll-marker-group: after;
+		scroll-behavior: smooth;
+	}
+	.wrapper::scroll-marker-group {
+		display: flex;
+		justify-content: center;
+		gap: 0.5rem;
+		padding: 0.5rem;
+	}
+
+	.card::scroll-marker {
+		content: '';
+		display: block;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background-color: black;
+		flex-shrink: 0;
+	}
+
+	.card::scroll-marker:target-current {
+		background-color: var(--accent);
+	}
+
+	img {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+	}
+</style>    

@@ -7,7 +7,7 @@ const { name, description, media } = Astro.props;
 	{
         media.map((mediaSrc, i) => (
             <figure
-                class="card snap-center w-full max-w-125 shrink-0 box-border flex flex-col justify-center items-center text-center gap-2.5 aspect-square bg-white"
+                class="card snap-center w-full max-w-125 shrink-0 box-border flex flex-col justify-center items-center text-center gap-2.5 aspect-4/5 bg-white"
                 style={`--thumb: url("${getCldImageUrl({ src: mediaSrc, width: 220, height: 220, quality: 'auto' })}")`}
             >
                 <img src={getCldImageUrl({ src: mediaSrc, width: 1200, height: 1200 })} alt={`${name}-${description}-${i}`} />

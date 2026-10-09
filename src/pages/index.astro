@@ -3,11 +3,12 @@ import Layout from "../layouts/Layout.astro";
 // import BestSellers from "@components/BestSellers.astro";
 import MainCategorias from "@components/MainCategories.astro";
 
+import ProductsCarousel from "@components/ProductsCarousel.astro";
 import Reviews from "@components/Reviews.astro";
 import FAQS from "@components/productPage/FAQS.astro";
 
 const images = {
-	hero: "https://res.cloudinary.com/dr5knskbb/image/upload/v1789857953/maria-david_nsasf5.webp",
+	hero: "https://res.cloudinary.com/dr5knskbb/image/upload/v1791523691/hero_nwnahu.webp",
 
 };
 // CollectionPage + ItemList + BreadcrumbList
@@ -16,22 +17,38 @@ const seo = {
 	description:
 		"Especialistas al cuidado de tus ojos"
 };
+
+import CamionSVG from "@assets/camion.svg";
+import GarantiaSVG from "@assets/garantia.svg";
+import GafasSVG from "@assets/gafas.svg";
+import EstrellaSVG from "@assets/estrella.svg";
+
 ---
 
 <Layout title={seo.title} description={seo.description} hero={images.hero}>
 	<div
 		id="hero"
-		class="m-auto flex max-w-120 flex-col items-center pt-19!"
+		class="flex flex-col items-center pt-19! relative"
 	>
-		<img src={images.hero} alt="Hero Image" class="object-contain w-full h-full" />
+		<div class="absolute left-10 top-25 flex flex-col items-start gap-2 text-left">
+			<h1 class="flex flex-col text-5xl font-regular text-black/90 mt-4">
+				<span>TU VISIÓN.</span>
+				<span>TU ESTILO.</span>
+			</h1>
+			<p class="flex flex-col mb-4">
+				<span>GAFAS QUE SE ADAPTAN</span>
+				<span>A TI, A TU DÍA Y A TU HISTORIA</span>
+			</p>
+			<a href="/productos" class="bg-(--color-xocolata) text-white px-4 py-2">VER COLECCIÓN →</a>
+		</div>
+
+		
+
+		<img src={images.hero} alt="Hero Image" class="object-contain w-full" />
 
 
-		<h1 class="block w-ful text-center text-lg font-bold text-black/90 mt-4">
-			<span>Especialistas al cuidado de tus ojos</span>
-		</h1>
-		<p class="block w-full text-center mb-4">Cotiza tus gafas sin compromiso.</p>
 
-		<div class="mt-auto mb-4 flex w-full flex-col gap-4 px-5 text-center">
+		<!-- <div class="mt-auto mb-4 flex w-full flex-col gap-4 px-5 text-center">
 			<a
 				href="/productos"
 				class="block rounded bg-(--accent) px-5 py-2 text-lg font-semibold text-(--on-accent)"
@@ -41,10 +58,33 @@ const seo = {
 				Solicite una montura nueva con un examen vigente y me ha ido súper bien, recomiendo el lugar, 10/10-
 				⭐⭐⭐⭐⭐
 			</p>
+		</div> -->
+	</div>
+
+	<div class="flex gap-8 overflow-x overflow-scroll p-4 text-center text-sm text-black/90">
+		<div class="flex flex-col justify-center items-center w-40">
+			<CamionSVG width="40px" height="40px" />
+			<p class="no-wrap w-30 flex flex-col justify-center items-center">
+				<span>ENVÍOS A</span>
+				<span>TODO EL PAÍS</span>
+			</p>
+		</div>
+		<div class="flex flex-col justify-center items-center">
+			<GarantiaSVG width="40px" height="40px" />
+			<p>COMPRA SEGURA</p>
+		</div>
+		<div class="flex flex-col justify-center items-center">
+			<GafasSVG width="40px" height="40px" />
+			<p>ASESORÍA PERSONALIZADA</p>
+		</div>
+		<div class="flex flex-col justify-center items-center">
+			<EstrellaSVG width="40px" height="40px" />
+			<p>MARCAS SELECCIONADAS</p>
 		</div>
 	</div>
 
-	<div
+
+	<!-- <div
 		class="flex items-center justify-center gap-4 bg-(--accent) py-6 text-center text-sm text-white/95"
 	>
 		<p class="flex flex-1 flex-col items-center justify-center gap-2">
@@ -124,9 +164,24 @@ const seo = {
 			>
 			<span>Garantía<br /> de 90 días</span>
 		</p>
+	</div> -->
+
+	<div>
+		<img src="https://res.cloudinary.com/dr5knskbb/image/upload/v1791523690/man_rv569r.webp" alt="" class="w-full h-full object-cover">
+		<div class="bg-(--color-crema) flex flex-col gap-2 px-2.5 py-4">
+			<p class="text-sm">NUEVA COLECCIÓN</p>
+			<h2 class="text-3xl flex flex-col gap-1 font-regular">
+				<span>DISEÑOS</span>
+				<span>ATEMPORALES</span>
+			</h2>
+			<p>Estilo y funcionaliad para cada momento de tu día</p>
+			<a href="" class="bg-(--color-xocolata) text-white py-2 px-4 rounded w-fit">EXPLORAR →</a>
+		</div>
+		<img src="https://res.cloudinary.com/dr5knskbb/image/upload/v1791523691/woman_xw0buf.webp" alt="" class="w-full h-full object-cover">
+
 	</div>
 
-	<div class="flex flex-col gap-3 px-2.5 py-4">
+	<!-- <div class="flex flex-col gap-3 px-2.5 py-4">
 		<h2 class="mb-1 text-xl">Los más vendidos</h2>
 
 		<MainCategorias />
@@ -135,6 +190,11 @@ const seo = {
 			class="m-auto rounded bg-blue-900 px-3 py-2 text-white"
 			>Ver todos los productos</a
 		>
+	</div> -->
+
+	<div>
+		<h2 class="my-1 px-2.5 text-xl">NUESTRA COLECCIÓN</h2>
+		<ProductsCarousel />
 	</div>
 
 	<div class="py-4">

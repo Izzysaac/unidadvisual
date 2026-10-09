@@ -1,17 +1,24 @@
 [
   {
     "categoria": "Hombre",
-    "nombre": "Caballero Premium",
+    "nombre": "Perseo",
     "descripcion": "",
     "media": [
-      "caballero-negras-mate_b2ylde",
-      "caballero-premium-doradas_ln51ox",
-      "caballero-gris_mutfjw"
+      "perseo-trio_a2szjc.webp",
+      "modelos-01_xikokb.webp",
+      "perseo-gris-verde-02_n749eo.webp",
+      "perseo-gris-verde-01_tcmjmz.webp",
+      "perseo-negras-blaco_sscexm.webp",
+      "perseo-negro-plateado_sarvx2.webp",
+      "perseo-cafe_wbzitk.webp",
+      "modelos-02_picofx.webp",
+      "modelos-jovenes_d4tsxq.webp",
+      "modelos-tercera-edad_r4rngm.webp"
     ],
     "estado": "activo",
     "detalles": "",
     "opciones": {
-      "Color Montura": [
+      "Color": [
         "Negro mate",
         "Negro dorado",
         "Gris"
@@ -20,7 +27,7 @@
         "No",
         "Si"
       ],
-      "Fotocromatico": [
+      "Fotocromático": [
         "No",
         "Si"
       ]
@@ -29,86 +36,86 @@
       {
         "sku": "cape-nema-no-no",
         "precio": 200000,
-        "Color Montura": "Negro mate",
+        "Color": "Negro mate",
         "Filtro Luz Azul": "No",
-        "Fotocromatico": "No"
+        "Fotocromático": "No"
       },
       {
         "sku": "cape-nema-si-no",
         "precio": 240000,
-        "Color Montura": "Negro mate",
+        "Color": "Negro mate",
         "Filtro Luz Azul": "Si",
-        "Fotocromatico": "No"
+        "Fotocromático": "No"
       },
       {
         "sku": "cape-nema-no-si",
         "precio": 360000,
-        "Color Montura": "Negro mate",
+        "Color": "Negro mate",
         "Filtro Luz Azul": "No",
-        "Fotocromatico": "Si"
+        "Fotocromático": "Si"
       },
       {
         "sku": "cape-nema-si-si",
         "precio": 360000,
-        "Color Montura": "Negro mate",
+        "Color": "Negro mate",
         "Filtro Luz Azul": "Si",
-        "Fotocromatico": "Si"
+        "Fotocromático": "Si"
       },
       {
         "sku": "cape-nedo-no-no",
         "precio": 200000,
-        "Color Montura": "Negro dorado",
+        "Color": "Negro dorado",
         "Filtro Luz Azul": "No",
-        "Fotocromatico": "No"
+        "Fotocromático": "No"
       },
       {
         "sku": "cape-nedo-si-no",
         "precio": 240000,
-        "Color Montura": "Negro dorado",
+        "Color": "Negro dorado",
         "Filtro Luz Azul": "Si",
-        "Fotocromatico": "No"
+        "Fotocromático": "No"
       },
       {
         "sku": "cape-nedo-no-si",
         "precio": 360000,
-        "Color Montura": "Negro dorado",
+        "Color": "Negro dorado",
         "Filtro Luz Azul": "No",
-        "Fotocromatico": "Si"
+        "Fotocromático": "Si"
       },
       {
         "sku": "cape-nedo-si-si",
         "precio": 360000,
-        "Color Montura": "Negro dorado",
+        "Color": "Negro dorado",
         "Filtro Luz Azul": "Si",
-        "Fotocromatico": "Si"
+        "Fotocromático": "Si"
       },
       {
         "sku": "cape-gri-no-no",
         "precio": 200000,
-        "Color Montura": "Gris",
+        "Color": "Gris",
         "Filtro Luz Azul": "No",
-        "Fotocromatico": "No"
+        "Fotocromático": "No"
       },
       {
         "sku": "cape-gri-si-no",
         "precio": 240000,
-        "Color Montura": "Gris",
+        "Color": "Gris",
         "Filtro Luz Azul": "Si",
-        "Fotocromatico": "No"
+        "Fotocromático": "No"
       },
       {
         "sku": "cape-gri-no-si",
         "precio": 360000,
-        "Color Montura": "Gris",
+        "Color": "Gris",
         "Filtro Luz Azul": "No",
-        "Fotocromatico": "Si"
+        "Fotocromático": "Si"
       },
       {
         "sku": "cape-gri-si-si",
         "precio": 360000,
-        "Color Montura": "Gris",
+        "Color": "Gris",
         "Filtro Luz Azul": "Si",
-        "Fotocromatico": "Si"
+        "Fotocromático": "Si"
       }
     ]
   },

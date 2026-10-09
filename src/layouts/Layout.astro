@@ -71,7 +71,7 @@ const OrganizationSchema = {
 		<title>{title}</title>
 		<link rel="preconnect" href="https://res.cloudinary.com" />
 		<link rel="dns-prefetch" href="https://res.cloudinary.com">
-
+		<link rel="preload" href="/montserrat.woff2" as="font" type="font/woff2" crossorigin>
 		<link rel="canonical" href={canonicalURL.href} />
 
 		<link rel="sitemap" href="/sitemap-index.xml" />
@@ -128,9 +128,23 @@ const OrganizationSchema = {
 
 <style is:global>
 	@import "tailwindcss";
+
+	@font-face {
+        font-family: "Montserrat";
+        src: url("/montserrat.woff2") format("woff2");
+		font-weight: 200 800;
+		font-style: normal;
+    }
 	:root {
 
 	color-scheme: only light;
+
+	--color-xocolata: #3B2F2A;
+	--color-crema: #F6F1EB;
+	--color-arena: #EBDCC7;
+	--color-gris-piedra: #B7B2A9;
+	--color-carbon: #1a1a1a;
+
 	--brand: #c8774a;
 	--on-brand: #FFFFFF;
 	--brand-hover: #9A601D;
@@ -148,7 +162,7 @@ const OrganizationSchema = {
 	--color-bg-secondary: #F4F3ED;
 	--color-text: black;
 
-	--menu-bg: #ffffff;
+	--menu-bg: var(--color-crema);
 	--menu-text: #000000;
 
 	--primary-color: #007bff;
@@ -162,7 +176,7 @@ const OrganizationSchema = {
 		width: 100%;
         height: 100%;
 		background-color: var(--color-bg);
-		font-family: Poppins, sans-serif;
+		font-family: Montserrat, sans-serif;
 	}
 	button {
         touch-action: manipulation;
