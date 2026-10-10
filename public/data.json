@@ -1,6 +1,126 @@
 [
   {
     "categoria": "Hombre",
+    "nombre": "Caballero Premium",
+    "descripcion": "",
+    "media": [
+      "caballero-trio-01_fa4u7p.webp",
+      "negra-mate-01_h0zrxr.webp",
+      "negra-mate-02_tx3lfq.webp",
+      "negra-dorada-01_bmlroi.webp",
+      "negra-dorada-02_eqrenq.webp",
+      "gris-plata-01_d946aw.webp",
+      "gris-plata-02_i7cqgr.webp",
+      "caballero-trio-02_qnjimj.webp",
+      "caballero-modelos-02_rkf36q.webp",
+      "caballero-modelos-01_gjkifb.webp"
+    ],
+    "estado": "activo",
+    "detalles": "",
+    "opciones": {
+      "Color": [
+        "Negro Mate",
+        "Negro Dorado",
+        "Gris"
+      ],
+      "Fotocromatico": [
+        "No",
+        "Si"
+      ],
+      "Fotocromático": [
+        "No",
+        "Si"
+      ]
+    },
+    "variantes": [
+      {
+        "sku": "cape-nema-no-no",
+        "precio": 200000,
+        "Color": "Negro Mate",
+        "Fotocromatico": "No",
+        "Fotocromático": "No"
+      },
+      {
+        "sku": "cape-nema-si-no",
+        "precio": 240000,
+        "Color": "Negro Mate",
+        "Fotocromatico": "Si",
+        "Fotocromático": "No"
+      },
+      {
+        "sku": "cape-nema-no-si",
+        "precio": 310000,
+        "Color": "Negro Mate",
+        "Fotocromatico": "No",
+        "Fotocromático": "Si"
+      },
+      {
+        "sku": "cape-nema-si-si",
+        "precio": 310000,
+        "Color": "Negro Mate",
+        "Fotocromatico": "Si",
+        "Fotocromático": "Si"
+      },
+      {
+        "sku": "cape-nedo-no-no",
+        "precio": 200000,
+        "Color": "Negro Dorado",
+        "Fotocromatico": "No",
+        "Fotocromático": "No"
+      },
+      {
+        "sku": "cape-nedo-si-no",
+        "precio": 240000,
+        "Color": "Negro Dorado",
+        "Fotocromatico": "Si",
+        "Fotocromático": "No"
+      },
+      {
+        "sku": "cape-nedo-no-si",
+        "precio": 310000,
+        "Color": "Negro Dorado",
+        "Fotocromatico": "No",
+        "Fotocromático": "Si"
+      },
+      {
+        "sku": "cape-nedo-si-si",
+        "precio": 310000,
+        "Color": "Negro Dorado",
+        "Fotocromatico": "Si",
+        "Fotocromático": "Si"
+      },
+      {
+        "sku": "cape-gri-no-no",
+        "precio": 200000,
+        "Color": "Gris",
+        "Fotocromatico": "No",
+        "Fotocromático": "No"
+      },
+      {
+        "sku": "cape-gri-si-no",
+        "precio": 240000,
+        "Color": "Gris",
+        "Fotocromatico": "Si",
+        "Fotocromático": "No"
+      },
+      {
+        "sku": "cape-gri-no-si",
+        "precio": 310000,
+        "Color": "Gris",
+        "Fotocromatico": "No",
+        "Fotocromático": "Si"
+      },
+      {
+        "sku": "cape-gri-si-si",
+        "precio": 310000,
+        "Color": "Gris",
+        "Fotocromatico": "Si",
+        "Fotocromático": "Si"
+      }
+    ]
+  },
+  {
+    "categoria": "Mix",
     "nombre": "Perseo",
     "descripcion": "",
     "media": [
@@ -19,9 +139,8 @@
     "detalles": "",
     "opciones": {
       "Color": [
-        "Negro mate",
-        "Negro dorado",
-        "Gris"
+        "Negro Mate",
+        "Café"
       ],
       "Filtro Luz Azul": [
         "No",
@@ -34,350 +153,352 @@
     },
     "variantes": [
       {
-        "sku": "cape-nema-no-no",
+        "sku": "per-nema-no-no",
         "precio": 200000,
-        "Color": "Negro mate",
+        "Color": "Negro Mate",
         "Filtro Luz Azul": "No",
         "Fotocromático": "No"
       },
       {
-        "sku": "cape-nema-si-no",
+        "sku": "per-nema-si-no",
         "precio": 240000,
-        "Color": "Negro mate",
+        "Color": "Negro Mate",
         "Filtro Luz Azul": "Si",
         "Fotocromático": "No"
       },
       {
-        "sku": "cape-nema-no-si",
-        "precio": 360000,
-        "Color": "Negro mate",
+        "sku": "per-nema-no-si",
+        "precio": 310000,
+        "Color": "Negro Mate",
         "Filtro Luz Azul": "No",
         "Fotocromático": "Si"
       },
       {
-        "sku": "cape-nema-si-si",
-        "precio": 360000,
-        "Color": "Negro mate",
+        "sku": "per-nema-si-si",
+        "precio": 310000,
+        "Color": "Negro Mate",
         "Filtro Luz Azul": "Si",
         "Fotocromático": "Si"
       },
       {
-        "sku": "cape-nedo-no-no",
+        "sku": "per-cafe-no-no",
         "precio": 200000,
-        "Color": "Negro dorado",
+        "Color": "Café",
         "Filtro Luz Azul": "No",
         "Fotocromático": "No"
       },
       {
-        "sku": "cape-nedo-si-no",
+        "sku": "per-cafe-si-no",
         "precio": 240000,
-        "Color": "Negro dorado",
+        "Color": "Café",
         "Filtro Luz Azul": "Si",
         "Fotocromático": "No"
       },
       {
-        "sku": "cape-nedo-no-si",
-        "precio": 360000,
-        "Color": "Negro dorado",
+        "sku": "per-cafe-no-si",
+        "precio": 310000,
+        "Color": "Café",
         "Filtro Luz Azul": "No",
         "Fotocromático": "Si"
       },
       {
-        "sku": "cape-nedo-si-si",
-        "precio": 360000,
-        "Color": "Negro dorado",
-        "Filtro Luz Azul": "Si",
-        "Fotocromático": "Si"
-      },
-      {
-        "sku": "cape-gri-no-no",
-        "precio": 200000,
-        "Color": "Gris",
-        "Filtro Luz Azul": "No",
-        "Fotocromático": "No"
-      },
-      {
-        "sku": "cape-gri-si-no",
-        "precio": 240000,
-        "Color": "Gris",
-        "Filtro Luz Azul": "Si",
-        "Fotocromático": "No"
-      },
-      {
-        "sku": "cape-gri-no-si",
-        "precio": 360000,
-        "Color": "Gris",
-        "Filtro Luz Azul": "No",
-        "Fotocromático": "Si"
-      },
-      {
-        "sku": "cape-gri-si-si",
-        "precio": 360000,
-        "Color": "Gris",
+        "sku": "per-cafe-si-si",
+        "precio": 310000,
+        "Color": "Café",
         "Filtro Luz Azul": "Si",
         "Fotocromático": "Si"
       }
     ]
   },
   {
-    "categoria": "Hombre",
-    "nombre": "Hombre Linea 2",
+    "categoria": "Mix",
+    "nombre": "American",
     "descripcion": "",
     "media": [
-      "david_bi6mbk"
+      "negra-mate-dorada-01_x8hmxd.webp",
+      "negra-mate-dorada-02_x0knf5.webp",
+      "negra-mate-gris-01_lezx6y.webp",
+      "negra-mate-gris-02_m8gjqs.webp",
+      "american-duo-02_eldtlo.webp",
+      "american-duo-01_oxysw9.webp",
+      "american-modelo-02_ifj2v6.webp",
+      "american-modelo-02_ifj2v6.webp"
     ],
     "estado": "activo",
     "detalles": "",
     "opciones": {
+      "Color": [
+        "Negro Brillante Dorado",
+        "Negro Mate Gris"
+      ],
       "Filtro Luz Azul": [
         "No",
         "Si"
       ],
-      "Fotocromatico": [
+      "Fotocromático": [
         "No",
         "Si"
       ]
     },
     "variantes": [
       {
-        "sku": "hombre-l2",
-        "precio": 160,
+        "sku": "american-nebrido-no-no",
+        "precio": 220000,
+        "Color": "Negro Brillante Dorado",
         "Filtro Luz Azul": "No",
-        "Fotocromatico": "No"
+        "Fotocromático": "No"
       },
       {
-        "sku": "hombre-l2-luzazul",
-        "precio": 280,
+        "sku": "american-nebrido-si-no",
+        "precio": 260000,
+        "Color": "Negro Brillante Dorado",
         "Filtro Luz Azul": "Si",
-        "Fotocromatico": "No"
+        "Fotocromático": "No"
       },
       {
-        "sku": "hombre-l2-fotocromatico",
-        "precio": 680,
+        "sku": "american-nebrido-no-si",
+        "precio": 330000,
+        "Color": "Negro Brillante Dorado",
         "Filtro Luz Azul": "No",
-        "Fotocromatico": "Si"
+        "Fotocromático": "Si"
       },
       {
-        "sku": "hombre-l2-luzazul-fotocromatico",
-        "precio": 799,
+        "sku": "american-nebrido-si-si",
+        "precio": 330000,
+        "Color": "Negro Brillante Dorado",
         "Filtro Luz Azul": "Si",
-        "Fotocromatico": "Si"
+        "Fotocromático": "Si"
+      },
+      {
+        "sku": "american-nemagri-no-no",
+        "precio": 220000,
+        "Color": "Negro Mate Gris",
+        "Filtro Luz Azul": "No",
+        "Fotocromático": "No"
+      },
+      {
+        "sku": "american-nemagri-si-no",
+        "precio": 260000,
+        "Color": "Negro Mate Gris",
+        "Filtro Luz Azul": "Si",
+        "Fotocromático": "No"
+      },
+      {
+        "sku": "american-nemagri-no-si",
+        "precio": 330000,
+        "Color": "Negro Mate Gris",
+        "Filtro Luz Azul": "No",
+        "Fotocromático": "Si"
+      },
+      {
+        "sku": "american-nemagri-si-si",
+        "precio": 330000,
+        "Color": "Negro Mate Gris",
+        "Filtro Luz Azul": "Si",
+        "Fotocromático": "Si"
       }
     ]
   },
   {
-    "categoria": "Hombre",
-    "nombre": "Hombre Linea 3",
+    "categoria": "Mix",
+    "nombre": "M008",
     "descripcion": "",
     "media": [
-      "david_bi6mbk"
+      "negra-01_vhuv62.webp",
+      "negra-02_wdmgnt.webp",
+      "negra-02_wdmgnt.webp",
+      "ambar-02_k4kp3r.webp",
+      "duo-01_xkcplz.webp",
+      "duo-02_pfjcrn.webp",
+      "modelos_hbjrtr.webp"
     ],
     "estado": "activo",
     "detalles": "",
     "opciones": {
+      "Color": [
+        "Negra Mate",
+        "Demi Ámbar"
+      ],
       "Filtro Luz Azul": [
         "No",
         "Si"
       ],
-      "Fotocromatico": [
+      "Fotocromático": [
         "No",
         "Si"
       ]
     },
     "variantes": [
       {
-        "sku": "hombre-l3",
-        "precio": 160,
+        "sku": "american-nema-no-no",
+        "precio": 220000,
+        "Color": "Negra Mate",
         "Filtro Luz Azul": "No",
-        "Fotocromatico": "No"
+        "Fotocromático": "No"
       },
       {
-        "sku": "hombre-l2-luzazul",
-        "precio": 280,
+        "sku": "american-nema-si-no",
+        "precio": 260000,
+        "Color": "Negra Mate",
         "Filtro Luz Azul": "Si",
-        "Fotocromatico": "No"
+        "Fotocromático": "No"
       },
       {
-        "sku": "hombre-l2-fotocromatico",
-        "precio": 680,
+        "sku": "american-nema-no-si",
+        "precio": 330000,
+        "Color": "Negra Mate",
         "Filtro Luz Azul": "No",
-        "Fotocromatico": "Si"
+        "Fotocromático": "Si"
       },
       {
-        "sku": "hombre-l2-luzazul-fotocromatico",
-        "precio": 799,
+        "sku": "american-nema-si-si",
+        "precio": 330000,
+        "Color": "Negra Mate",
         "Filtro Luz Azul": "Si",
-        "Fotocromatico": "Si"
+        "Fotocromático": "Si"
+      },
+      {
+        "sku": "american-deam-no-no",
+        "precio": 220000,
+        "Color": "Demi Ámbar",
+        "Filtro Luz Azul": "No",
+        "Fotocromático": "No"
+      },
+      {
+        "sku": "american-deam-si-no",
+        "precio": 260000,
+        "Color": "Demi Ámbar",
+        "Filtro Luz Azul": "Si",
+        "Fotocromático": "No"
+      },
+      {
+        "sku": "american-deam-no-si",
+        "precio": 330000,
+        "Color": "Demi Ámbar",
+        "Filtro Luz Azul": "No",
+        "Fotocromático": "Si"
+      },
+      {
+        "sku": "american-deam-si-si",
+        "precio": 330000,
+        "Color": "Demi Ámbar",
+        "Filtro Luz Azul": "Si",
+        "Fotocromático": "Si"
       }
     ]
   },
   {
     "categoria": "Mujer",
-    "nombre": "Mujer Linea 1",
+    "nombre": "Atena",
     "descripcion": "",
     "media": [
-      "dra-maria_zpjugh"
+      "atena-trio-01_xbjtqf.webp",
+      "atena-trio-02_kvifrs.webp",
+      "atena-trio-03_jrcsra.webp",
+      "modelo-atena-02_hp8eh5.webp",
+      "modelos-atena-01_arswp0.webp"
     ],
     "estado": "activo",
     "detalles": "",
     "opciones": {
+      "Color": [
+        "Demi Ámbar",
+        "Demi Fucsia",
+        "Demi Crema"
+      ],
       "Filtro Luz Azul": [
         "No",
         "Si"
       ],
-      "Fotocromatico": [
+      "Fotocromático": [
         "No",
         "Si"
       ]
     },
     "variantes": [
       {
-        "sku": "mujer-l1",
-        "precio": 160,
+        "sku": "per-nema-no-no",
+        "precio": 200000,
+        "Color": "Demi Ámbar",
         "Filtro Luz Azul": "No",
-        "Fotocromatico": "No"
+        "Fotocromático": "No"
       },
       {
-        "sku": "mujer-l1-luzazul-fotocromatico",
-        "precio": 280,
+        "sku": "per-nema-si-no",
+        "precio": 240000,
+        "Color": "Demi Ámbar",
         "Filtro Luz Azul": "Si",
-        "Fotocromatico": "No"
+        "Fotocromático": "No"
       },
       {
-        "sku": "mujer-l1-fotocromatico",
-        "precio": 680,
+        "sku": "per-nema-no-si",
+        "precio": 310000,
+        "Color": "Demi Ámbar",
         "Filtro Luz Azul": "No",
-        "Fotocromatico": "Si"
+        "Fotocromático": "Si"
       },
       {
-        "sku": "mujer-l1-luzazul-fotocromatico",
-        "precio": 799,
+        "sku": "per-nema-si-si",
+        "precio": 310000,
+        "Color": "Demi Ámbar",
         "Filtro Luz Azul": "Si",
-        "Fotocromatico": "Si"
-      }
-    ]
-  },
-  {
-    "categoria": "Mujer",
-    "nombre": "Mujer Linea 2",
-    "descripcion": "",
-    "media": [
-      "dra-maria_zpjugh"
-    ],
-    "estado": "activo",
-    "detalles": "",
-    "opciones": {
-      "Filtro Luz Azul": [
-        "No",
-        "Si"
-      ],
-      "Fotocromatico": [
-        "No",
-        "Si"
-      ]
-    },
-    "variantes": [
+        "Fotocromático": "Si"
+      },
       {
-        "sku": "mujer-l2",
-        "precio": 160,
+        "sku": "per-cafe-no-no",
+        "precio": 200000,
+        "Color": "Demi Fucsia",
         "Filtro Luz Azul": "No",
-        "Fotocromatico": "No"
+        "Fotocromático": "No"
       },
       {
-        "sku": "mujer-l2-luzazul",
-        "precio": 280,
+        "sku": "per-cafe-si-no",
+        "precio": 240000,
+        "Color": "Demi Fucsia",
         "Filtro Luz Azul": "Si",
-        "Fotocromatico": "No"
+        "Fotocromático": "No"
       },
       {
-        "sku": "mujer-l2-fotocromatico",
-        "precio": 680,
+        "sku": "per-cafe-no-si",
+        "precio": 310000,
+        "Color": "Demi Fucsia",
         "Filtro Luz Azul": "No",
-        "Fotocromatico": "Si"
+        "Fotocromático": "Si"
       },
       {
-        "sku": "mujer-l2-luzazul-fotocromatico",
-        "precio": 799,
+        "sku": "per-cafe-si-si",
+        "precio": 310000,
+        "Color": "Demi Fucsia",
         "Filtro Luz Azul": "Si",
-        "Fotocromatico": "Si"
-      }
-    ]
-  },
-  {
-    "categoria": "Mujer",
-    "nombre": "Mujer Linea 3",
-    "descripcion": "",
-    "media": [
-      "dra-maria_zpjugh"
-    ],
-    "estado": "inactivo",
-    "detalles": "",
-    "opciones": {
-      "Filtro Luz Azul": [
-        "No",
-        "Si"
-      ],
-      "Fotocromatico": [
-        "No",
-        "Si"
-      ]
-    },
-    "variantes": [
+        "Fotocromático": "Si"
+      },
       {
-        "sku": "mujer-l3",
-        "precio": 160,
+        "sku": "per-cafe-no-no",
+        "precio": 200000,
+        "Color": "Demi Crema",
         "Filtro Luz Azul": "No",
-        "Fotocromatico": "No"
+        "Fotocromático": "No"
       },
       {
-        "sku": "mujer-l2-luzazul",
-        "precio": 280,
+        "sku": "per-cafe-si-no",
+        "precio": 240000,
+        "Color": "Demi Crema",
         "Filtro Luz Azul": "Si",
-        "Fotocromatico": "No"
+        "Fotocromático": "No"
       },
       {
-        "sku": "mujer-l2-fotocromatico",
-        "precio": 680,
+        "sku": "per-cafe-no-si",
+        "precio": 310000,
+        "Color": "Demi Crema",
         "Filtro Luz Azul": "No",
-        "Fotocromatico": "Si"
+        "Fotocromático": "Si"
       },
       {
-        "sku": "mujer-l2-luzazul-fotocromatico",
-        "precio": 799,
+        "sku": "per-cafe-si-si",
+        "precio": 310000,
+        "Color": "Demi Crema",
         "Filtro Luz Azul": "Si",
-        "Fotocromatico": "Si"
-      }
-    ]
-  },
-  {
-    "categoria": "Hombre",
-    "nombre": "Lentes",
-    "descripcion": "",
-    "media": [
-      "david_bi6mbk"
-    ],
-    "estado": "inactivo",
-    "detalles": "",
-    "opciones": {
-      "Filtro Luz Azul": [
-        "Si"
-      ],
-      "Fotocromatico": [
-        "Si"
-      ]
-    },
-    "variantes": [
-      {
-        "sku": "mujer-lentes",
-        "precio": 799,
-        "Filtro Luz Azul": "Si",
-        "Fotocromatico": "Si"
-      },
-      {
-        "sku": "mujer-lentes",
-        "precio": 799,
-        "Filtro Luz Azul": "Si",
-        "Fotocromatico": "Si"
+        "Fotocromático": "Si"
       }
     ]
   }

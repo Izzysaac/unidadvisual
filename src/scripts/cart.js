@@ -36,7 +36,10 @@ const render = () => {
 
 	// Si no hay items, muestra un mensaje
 	if (!cart.items.length) {
-		itemsEl.innerHTML = `<p class="empty">Tu carrito está vacío.</p>`;
+		itemsEl.innerHTML = `
+			<p class="empty">Tu carrito está vacío.</p>
+			<a href="/productos" class="underline">Ver productos</a>
+		`;
 		return;
 	}
 // transition:name="img-${it.image}-1"
