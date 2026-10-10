@@ -1,0 +1,84 @@
+---
+import { getCldImageUrl } from 'astro-cloudinary/helpers';
+
+const reviews  = [
+    {
+        image: "https://res.cloudinary.com/dr5knskbb/image/upload/v1789868032/cliente-03_hn97dk.webp",
+        name: "Isabela Diaz Ibañez",
+        text: "Excelente atención. Muy buena calidad en las gafas"
+    },
+    {
+        image: "https://res.cloudinary.com/dr5knskbb/image/upload/v1789868032/cliente-01_difpoi.webp",
+        name: "LILIANA CASTRO",
+        text:  "Un super servicio, Profesional y garantizado, muchas gracias"
+    },
+    {
+        image: "https://res.cloudinary.com/dr5knskbb/image/upload/v1789868032/cliente-04_k6ftq8.webp",
+        name: "Diana Sanchez",
+        text: "Excelente atención, las gafas muy bonitas, lentes nítidos y de muy alta calidad."
+    },
+    {
+        image: "https://res.cloudinary.com/dr5knskbb/image/upload/v1789868032/cliente-02_xkcv28.webp",
+        name: "Luisa y Arturo",
+        text: "Exelente experiencia, super recomendado. Felizzzz"
+    }
+]
+
+import StarSVG from "@assets/star.svg";
+
+---
+
+<div class="wrapper flex w-full snap-x snap-mandatory gap-2 overflow-x-scroll items-start mt-8">
+	{
+        reviews.map((review, i) => (
+            <article class="card snap-center w-full max-w-125 shrink-0 box-border flex flex-col justify-center items-center text-center gap-2.5 bg-slate-100 py-3">
+                <div class="flex flex-col justify-center items-center gap-2.5 w-50">
+                    <span class="flex">
+                        <StarSVG class="inline-block w-4 h-4 mr-1 fill-current" />
+                        <StarSVG class="inline-block w-4 h-4 mr-1 fill-current" />
+                        <StarSVG class="inline-block w-4 h-4 mr-1 fill-current" />
+                        <StarSVG class="inline-block w-4 h-4 mr-1 fill-current" />
+                        <StarSVG class="inline-block w-4 h-4 mr-1 fill-current" />
+                    </span>
+                    <p class="text-(--color-xocolata)">{review.text}</p>
+                    <img src={review.image} alt="" />
+                    <p class="text-lg font-bold">{review.name}</p>
+                </div>
+            </article>
+        ))
+    }
+<!-- transition:name={`img-${mediaSrc}-${i}`} -->
+</div>
+
+<style>
+	.wrapper {
+		scroll-marker-group: after;
+		scroll-behavior: smooth;
+	}
+	.wrapper::scroll-marker-group {
+		display: flex;
+		justify-content: center;
+		gap: 0.5rem;
+		padding: 0.5rem;
+	}
+
+	.card::scroll-marker {
+		content: '';
+		display: block;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background-color: black;
+		flex-shrink: 0;
+	}
+
+	.card::scroll-marker:target-current {
+		background-color: var(--accent);
+	}
+
+	img {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+	}
+</style>    

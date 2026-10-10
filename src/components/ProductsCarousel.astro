@@ -4,33 +4,41 @@ const products  = [
     {
         image: "https://res.cloudinary.com/dr5knskbb/image/upload/v1791583056/perseo-gris_fimtk2-product-main.webp",
         name: "Perseo",
+        url: "/productos/perseo"
     },
     {
         image: "https://res.cloudinary.com/dr5knskbb/image/upload/v1791582775/american-product-main.webp",
         name: "American",
+        url: "/productos/american"
     },
     {
         image: "https://res.cloudinary.com/dr5knskbb/image/upload/v1791582985/dydm008-product-main.webp",
         name: "DYD M008",
+        url: "/productos/dyd-m008"
     },
     {
         image: "https://res.cloudinary.com/dr5knskbb/image/upload/v1791582810/dyd-caballero-product-main.webp",
         name: "DYD Caballero",
+        url: "/productos/dyd-caballero"
     },
     {
         image: "https://res.cloudinary.com/dr5knskbb/image/upload/v1791582859/atena_cbuxsk-product-main.webp",
         name: "Atena",
+        url: "/productos/atena"
     }
 ]
 ---
 <div class="overflow-x overflow-scroll flex gap-2 p-4 text-center text-sm text-black/90 snap-x snap-mandatory">
     {
         products.map((product, i) => (
-            <article class="">
+            <article class="relative">
                 <figure class="w-40 aspect-video">
                     <img src={product.image} alt="" class="w-full h-full object-cover" />
                 </figure>
-                <p class="font-semibold uppercase bg-(--color-crema) py-2">{product.name}</p>
+                {/* <p class="font-semibold uppercase bg-(--color-crema) py-2">{product.name}</p> */}
+                <a href={product.url} class="font-semibold uppercase bg-(--color-crema) py-2 w-full link block">
+                    {product.name}
+                </a>
             </article>
         ))
     }
@@ -79,5 +87,15 @@ const products  = [
 		max-width: 100%;
 		max-height: 100%;
 		object-fit: contain;
+	}
+
+    .link::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1; /* Hace que el área clicable cubra toda la tarjeta */
 	}
 </style>    

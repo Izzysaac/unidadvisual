@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import MainCategorias from "@components/MainCategories.astro";
 
 import ProductsCarousel from "@components/ProductsCarousel.astro";
-import Reviews from "@components/Reviews.astro";
+import ReviewsHome from "@components/ReviewsHome.astro";
 import FAQS from "@components/productPage/FAQS.astro";
 
 const images = {
@@ -175,7 +175,7 @@ import EstrellaSVG from "@assets/estrella.svg";
 				<span>ATEMPORALES</span>
 			</h2>
 			<p class="opacity-90">Estilo y funcionaliad para cada momento de tu día</p>
-			<a href="" class="bg-(--color-xocolata) text-white py-2 px-4 rounded w-fit">EXPLORAR →</a>
+			<a href="/productos" class="bg-(--color-xocolata) text-white py-2 px-4 rounded w-fit">EXPLORAR →</a>
 		</div>
 		<img src="https://res.cloudinary.com/dr5knskbb/image/upload/v1791523691/woman_xw0buf.webp" alt="" class="w-full h-full object-cover">
 
@@ -198,12 +198,12 @@ import EstrellaSVG from "@assets/estrella.svg";
 	</div>
 
 	<div class="py-4">
-		<h2 class="mb-1 px-2.5 text-xl">Opiniones</h2>
-		<Reviews />
+		<h2 class="mb-1 px-2.5 text-xl text-center">OPINIONES</h2>
+		<ReviewsHome />
 	</div>
 
 	<div class="px-2.5 py-4 text-pretty">
-		<h2 class="text-xl font-bold">Nosotros</h2>
+		<h2 class="text-xl text-center">NOSOTROS</h2>
 
 		<figure>
 			<img src="https://res.cloudinary.com/dr5knskbb/image/upload/v1789857952/david_bi6mbk.webp" alt="Dr David Colmenares" class="my-2 w-full rounded-lg object-cover" />
