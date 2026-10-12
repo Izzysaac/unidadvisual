@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import CTAMonturas from "@components/CTA-monturas.astro";
+import FAQS from "@components/productPage/FAQS.astro";
+
+const images = {
+	hero: "https://res.cloudinary.com/dr5knskbb/image/upload/v1791523691/hero_nwnahu.webp",
+
+};
+// CollectionPage + ItemList + BreadcrumbList
+const seo = {
+	title: "Optica Unidad Visual",
+	description:
+		"Especialistas al cuidado de tus ojos"
+};
+
+---
+
+<Layout title={seo.title} description={seo.description} hero={images.hero}>
+
+
+    <h1 class="mt-20">
+        Página de mitigación de riesgos
+        (reducción de ansiedad)
+    </h1>
+
+    <h1>Punto físico</h1>
+    <p>Alianza con la óptica</p>
+
+    <ul>
+        <li>Fotos local y equipo</li>
+        <li>Dirección y mapa</li>
+        <li>Horarios de atención</li>
+        <li>Código de descuento</li>
+    </ul>
+
+    <a href="maps.app.goo.gl/J2q4eYvtGPMa1bmm6" target="_blank">Cómo llegar</a>
+    <a href="https://wa.me/573228360542" target="_blank">Whatsapp</a>
+
+    Punto físico
+Muestra la alianza con una óptica de confianza e invita a visitarla con un código de
+descuento.
+Alianza: quiénes son, foto del local y del equipo, años de experiencia.
+Cómo llegar: dirección (Centro Comercial Centro Suba, Bogotá), mapa y horarios.
+Código de descuento: visible en la página, con botón para copiarlo y la condición:
+válido al comprar en el punto físico.
+Botones: "Cómo llegar" (Google Maps) y "Escríbenos por WhatsApp".
+
+    <CTAMonturas />
+	
+</Layout>
+
+<style>
+	@import "tailwindcss";
+
+</style>

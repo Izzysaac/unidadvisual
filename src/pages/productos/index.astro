@@ -113,7 +113,7 @@ const seo = {
 					products.map((product, i) => (
 					<li data-category={`${getCategorySlug(product.categoria)}`}>
 						<article class="product-card relative text-center" >
-								<figure class="aspect-ratio-4/5">
+								<figure class="none aspect-ratio-4/5">
 									<img
 										src={`${getCloudinaryImageUrl(product.media[0], { w: 400, h: 500 })}`}
 										srcset={

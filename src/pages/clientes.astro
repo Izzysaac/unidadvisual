@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import CTAMonturas from "@components/CTA-monturas.astro";
+import FAQS from "@components/productPage/FAQS.astro";
+
+const images = {
+	hero: "https://res.cloudinary.com/dr5knskbb/image/upload/v1791523691/hero_nwnahu.webp",
+
+};
+// CollectionPage + ItemList + BreadcrumbList
+const seo = {
+	title: "Optica Unidad Visual",
+	description:
+		"Especialistas al cuidado de tus ojos"
+};
+
+---
+
+<Layout title={seo.title} description={seo.description} hero={images.hero}>
+	
+   
+     <h1 class="mt-20">
+        Página de prueba social 
+    (reducción de ansiedad)
+
+    </h1>
+
+    <CTAMonturas />
+	
+</Layout>
+
+<style>
+	@import "tailwindcss";
+
+</style>

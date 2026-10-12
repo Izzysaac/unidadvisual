@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+// import BestSellers from "@components/BestSellers.astro";
+import MainCategorias from "@components/MainCategories.astro";
+
+import ProductsCarousel from "@components/ProductsCarousel.astro";
+import ReviewsHome from "@components/ReviewsHome.astro";
+import FAQS from "@components/productPage/FAQS.astro";
+
+const images = {
+	hero: "https://res.cloudinary.com/dr5knskbb/image/upload/v1791523691/hero_nwnahu.webp",
+
+};
+// CollectionPage + ItemList + BreadcrumbList
+const seo = {
+	title: "Optica Unidad Visual",
+	description:
+		"Especialistas al cuidado de tus ojos"
+};
+
+import CTAMonturas from "@components/CTA-monturas.astro";
+
+---
+
+<Layout title={seo.title} description={seo.description} hero={images.hero}>
+
+    
+
+    <h1 class="mt-20">
+        Página de reducción de fricción 
+    (facilidad psicologica de compra)
+    </h1>
+	
+    <h1>¿Como comprar?</h1>
+
+    <ol>
+        <li>Elige tu montura</li>
+        <li>Elige tus lentes</li>
+        <li>Envia tu formula</li>
+        <li>Realiza tu pago</li>
+        <li>Recíbelas en casa</li>
+    </ol>
+
+    <FAQS />
+
+    <CTAMonturas />
+</Layout>
+
+<style>
+	@import "tailwindcss";
+
+</style>
